@@ -115,4 +115,15 @@
   </div>
   <!-- page-body-wrapper ends -->
 </div>
+@stop
+@section('script')
+    
+<script>
+  $('#editarUsu').on('show.bs.modal', function (event) { 
+          var button = $(event.relatedTarget);
+          var recipientId = button.data('id');
+          var modal = $(this);
+          modal.find('#user').val(recipientId);
+      })
+</script>
 @endsection

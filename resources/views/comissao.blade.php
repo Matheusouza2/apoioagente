@@ -25,4 +25,9 @@
   </div>
   <!-- page-body-wrapper ends -->
 </div>
+@stop
+
+@section('script')
+  <script defer src="{{ asset('js/comissao.js') }}"></script>
+
 @endsection

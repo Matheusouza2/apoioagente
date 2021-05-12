@@ -11,26 +11,15 @@ const mix = require('laravel-mix');
  |
  */
 mix.styles([
-    'resources/views/vendor/nucleo/css/nucleo.css',
-    'resources/views/css/argon.css',
-    'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css',
-    'node_modules/fullcalendar/main.css'
-], 'public/site/css/style.css')
+    'resources/css/style.css',
+    'resources/css/vendor.bundle.base.css',
+], 'public/css/style.css')
 
 .scripts([
-    'resources/views/vendor/jquery/dist/jquery.min.js',
-    'resources/views/vendor/bootstrap/dist/js/bootstrap.bundle.min.js',
-    'resources/views/vendor/js-cookie/js.cookie.js',
-    'resources/views/vendor/jquery.scrollbar/jquery.scrollbar.min.js',
-    'resources/views/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js',
-    'resources/views/vendor/chart.js/dist/Chart.min.js',
-    'resources/views/vendor/chart.js/dist/Chart.extension.js',
-    'resources/views/js/argon.js',
-    'node_modules/select2/dist/js/select2.min.js',
-    'node_modules/select2/dist/js/i18n/pt-BR.js',
-    'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
-    'node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.pt-BR.min.js',
-    'node_modules/fullcalendar/main.js',
-    'node_modules/fullcalendar/locales/pt-br.js'
-], 'public/site/js/script.js')
+    'resources/js/vendor.bundle.base.js',
+    'resources/js/off-canvas.js',
+    'resources/js/misc.js',
+    'resources/js/dashboard.js',
+    'resources/js/todolist.js',    
+], 'public/js/script.js')
 .version();

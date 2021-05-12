@@ -14,7 +14,7 @@
       <div class="card bg-gradient-info card-img-holder text-white">
         <div class="card-body">
           <img src="{{ asset('images/circle.svg') }}" class="card-img-absolute" alt="circle-image" />
-          <h4 class="font-weight-normal mb-3">Sua jornada <i class="fad fa-badge-dollar text-white fa-2x float-right"></i>
+          <h4 class="font-weight-normal mb-3">Sua jornada <sup>Em breve</sup><i class="fad fa-badge-dollar text-white fa-2x float-right"></i>
           </h4>
           <div class="progress mb-5 mt-4">
             <div class="progress-bar bg-secondary" role="progressbar" style="width: 0%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -27,9 +27,9 @@
       <div class="card bg-gradient-success card-img-holder text-white">
         <div class="card-body">
           <img src="{{ asset('images/circle.svg') }}" class="card-img-absolute" alt="circle-image" />
-          <h4 class="font-weight-normal mb-3">Ganhos Totais <i class="fal fa-usd-circle fa-2x float-right"></i>
+          <h4 class="font-weight-normal mb-3">Ganhos Totais <sup>Em breve</sup> <i class="fal fa-usd-circle fa-2x float-right"></i>
           </h4>
-          <h2 class="mb-5">95,5741</h2>
+          <h2 class="mb-5">R$ 0,00</h2>
           <h6 class="card-text">Increased by 5%</h6>
         </div>
       </div>
@@ -256,42 +256,42 @@
                   <label class="form-check-label">
                     <input class="checkbox" type="checkbox"> Meeting with Alisa </label>
                 </div>
-                <i class="remove mdi mdi-close-circle-outline"></i>
+                <i class="remove fal fa-times-circle"></i>
               </li>
               <li class="completed">
                 <div class="form-check">
                   <label class="form-check-label">
                     <input class="checkbox" type="checkbox" checked> Call John </label>
                 </div>
-                <i class="remove mdi mdi-close-circle-outline"></i>
+                <i class="remove fal fa-times-circle"></i>
               </li>
               <li>
                 <div class="form-check">
                   <label class="form-check-label">
                     <input class="checkbox" type="checkbox"> Create invoice </label>
                 </div>
-                <i class="remove mdi mdi-close-circle-outline"></i>
+                <i class="remove fal fa-times-circle"></i>
               </li>
               <li>
                 <div class="form-check">
                   <label class="form-check-label">
                     <input class="checkbox" type="checkbox"> Print Statements </label>
                 </div>
-                <i class="remove mdi mdi-close-circle-outline"></i>
+                <i class="remove fal fa-times-circle"></i>
               </li>
               <li class="completed">
                 <div class="form-check">
                   <label class="form-check-label">
                     <input class="checkbox" type="checkbox" checked> Prepare for presentation </label>
                 </div>
-                <i class="remove mdi mdi-close-circle-outline"></i>
+                <i class="remove fal fa-times-circle"></i>
               </li>
               <li>
                 <div class="form-check">
                   <label class="form-check-label">
                     <input class="checkbox" type="checkbox"> Pick up kids from school </label>
                 </div>
-                <i class="remove mdi mdi-close-circle-outline"></i>
+                <i class="remove far fa-times-circle"></i>
               </li>
             </ul>
           </div>

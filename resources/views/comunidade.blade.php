@@ -160,6 +160,8 @@
   </div>
   <!-- page-body-wrapper ends -->
 </div>
-@parent
-<script async src="{{ asset('js/publish.js') }}"></script>
+@stop
+
+@section('script')
+  <script async src="{{ asset('js/publish.js') }}"></script>
 @endsection
