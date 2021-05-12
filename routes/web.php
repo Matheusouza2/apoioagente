@@ -27,7 +27,7 @@ Route::post('/put', 'UserController@put')->name('cadastro');
  */
 Route::middleware(['auth'])->prefix('agente')->group(function () {
     
-    Route::get('/comissao', 'UserController@agente')->name('comissao');
+    Route::get('/comissao', function (){ return view('comissao'); })->name('comissao');
     /**
     * COMISSÃO
     */
@@ -72,6 +72,8 @@ Route::middleware(['auth'])->prefix('agente')->group(function () {
      */
     Route::get('/comunidade', 'PublicacaoController@index')->name('comunidade');
     Route::post('/comunidade/publicar', 'PublicacaoController@store')->name('storePublicacao');
+    Route::get('/comunidade/delete/id/{id}', 'PublicacaoController@delete')->name('delPub');
+
     //COMENTARIOS
     Route::post('/comunidade/comentar', 'ComentarioController@store')->name('storeComentario');  
 

@@ -19,7 +19,7 @@ class PublicacaoController extends Controller
     public function index()
     {
         if(Auth::check() === true){
-            $publicacoes = Publicacao::select('publicacao.*', 'usuario.nome as nome')
+            $publicacoes = Publicacao::select('publicacao.*', 'usuario.nome as nome', 'usuario.id as id_user')
                                     ->join('usuario', 'publicacao.usuario', '=', 'usuario.id')
                                     ->orderBy('publicacao.id', 'desc')
                                     ->get();
@@ -28,10 +28,10 @@ class PublicacaoController extends Controller
                                     ->orderBy('comentarios.comentario', 'desc')
                                     ->get();
 
-            return view('agente.comunidade')->with('publicacoes', $publicacoes)->with('comentarios', $comentarios);
+            return view('comunidade')->with('publicacoes', $publicacoes)->with('comentarios', $comentarios);
         }
         
-        return redirect()->route('controle');
+        return redirect('/');
     }
 
     /**
@@ -104,8 +104,11 @@ class PublicacaoController extends Controller
      * @param  \App\publicacao  $publicacao
      * @return \Illuminate\Http\Response
      */
-    public function destroy(publicacao $publicacao)
+    public function delete(Request $request)
     {
-        //
+        $pub = Publicacao::find($request->id);
+        $pub->delete();
+
+        return redirect()->back()->with('success', 'Publicação apagada com sucesso');
     }
 }

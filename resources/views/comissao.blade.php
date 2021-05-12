@@ -17,9 +17,7 @@
             </span> Início
           </h3>
         </div>
-        @include('templates.body-loggedout')
-        
-
+        @include('templates.body-loggedin')
       @include('templates.footer')
       <!-- content-wrapper ends -->
     </div>

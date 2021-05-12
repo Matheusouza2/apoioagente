@@ -35,7 +35,7 @@ class UserController extends Controller
         
         if(Auth::attempt($usuario)){
             $valorMes = DB::select('select sum(valor) as ganho from comissao where usuario = ?', [Auth::user()->id]);
-            return redirect()->back()->with('ValorGanho', $valorMes[0]->ganho);
+            return redirect()->route('comissao')->with('ValorGanho', $valorMes[0]->ganho);
         }
         return redirect()->back()->with('error', 'Verifique o email e senha digitados e tente novamente');
     }

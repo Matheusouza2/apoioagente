@@ -77,26 +77,26 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="pages/forms/basic_elements.html">
+                <a class="nav-link" href="/agente/desktop">
                 <span class="menu-title">Sistema Desktop <sup>Em breve</sup></span>
                 <i class="fal fa-laptop menu-icon"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="pages/charts/chartjs.html">
+                <a class="nav-link" href="/agente/comunidade">
                 <span class="menu-title">Comunidade de Agentes</span>
                 <i class="fal fa-comments-dollar menu-icon"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="pages/tables/basic-table.html">
+                <a class="nav-link" href="/agente/suporte">
                 <span class="menu-title">Suporte <sup>Em breve</sup></span>
                 <i class="fal fa-user-headset menu-icon"></i>
                 </a>
             </li>
             @if (Auth::user()->permissao == 'M')
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/tables/basic-table.html">
+                    <a class="nav-link" href="/agente/controle">
                     <span class="menu-title">Controle de Usuários</span>
                     <i class="fal fa-users menu-icon"></i>
                     </a>

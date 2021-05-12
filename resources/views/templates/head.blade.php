@@ -39,6 +39,15 @@
     <script defer src="{{ asset('js/todolist.js')}}"></script>
     <script async src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script async src="{{ asset('js/comissao.js') }}"></script>
+
+    <script>
+      $('#editarUsu').on('show.bs.modal', function (event) { 
+              var button = $(event.relatedTarget);
+              var recipientId = button.data('id');
+              var modal = $(this);
+              modal.find('#user').val(recipientId);
+          })
+    </script>
     <!-- End custom js for this page -->
     @if (session()->has('success'))
         <script>

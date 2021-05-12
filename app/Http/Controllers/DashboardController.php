@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
     public function TelaInicial(){
+        if(Auth::check()){
+            return redirect()->route('comissao');
+        }
         return view('index');
     }
 
@@ -17,7 +20,7 @@ class DashboardController extends Controller
     {
         if(Auth::check() === true){
             $usuarios = User::all();
-            return view('agente/controle')->with('usuarios',$usuarios);
+            return view('controle')->with('usuarios',$usuarios);
         }
         return redirect()->back();
     }
@@ -36,11 +39,11 @@ class DashboardController extends Controller
         $dados = DB::select('select * from comissao where usuario = ?', [$user->id]);
         $dados2 = DB::select('select * from publicacao where usuario = ?', [$user->id]);
 
-        return view('agente.detalhes')->with('dados', $dados)->with('dadosPub', $dados2)->with('user', $user);
+        return view('detalhes')->with('dados', $dados)->with('dadosPub', $dados2)->with('user', $user);
     }
 
     public function support()
     {
-        return view('agente.support');
+        return view('support');
     }
 }
