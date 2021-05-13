@@ -106,8 +106,11 @@
                   <div class="card-header">
                     <div class="row">
                       <div class="col col-lg-6">
-                        <a href="">{{ $publicacao->nome }}</a>
-                        <br>
+                        <a href="{{ route('perfilPublico', [$publicacao->id_user]) }}">
+                          <img src="{{ asset('storage/images/'.$publicacao->id_user.'/'.$publicacao->foto) }}" width="40px" class="rounded-circle" alt="">
+                          <span class="availability-status online"></span>
+                          {{ $publicacao->nome }}
+                        </a>
                         <sup>{{ date( 'd/m/Y' , strtotime($publicacao->data)) }}</sup>
                       </div>
                       <div class="col col-lg-6 text-right">

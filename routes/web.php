@@ -14,7 +14,7 @@ Route::post('/login', 'UserController@login')->name('login');
 
 Route::get('/logout', 'UserController@logout')->name('logout');
 
-Route::post('/put', 'UserController@put')->name('cadastro');
+Route::post('/salvar', 'UserController@store')->name('cadastro');
 
 //Route::get('/contribua', function(){return view('contribua');})->name('contribua');
 
@@ -88,4 +88,12 @@ Route::middleware(['auth'])->prefix('agente')->group(function () {
     Route::get('/controle', 'DashboardController@controle')->name('controleUsuarios');
     Route::post('/controle/edit', 'DashboardController@edit')->name('editUser');
     Route::get('/controle/detalhe/{user}', 'DashboardController@detalhe')->name('detalhes');
+
+    /**
+     * PERFIL
+     */
+    Route::get('/perfil', 'UserController@show')->name('profile');
+    Route::put('/usuario/atualizar/{user}', 'UserController@put')->name('userUpdate');
+    Route::post('/usuario/enviar_foto/', 'UserController@storeImage')->name('uploadImagePerfil');
+    Route::get('/usuario/perfil/{id}', 'UserController@perfilPub')->name('perfilPublico');
 });

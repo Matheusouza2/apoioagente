@@ -19,7 +19,7 @@ class DashboardController extends Controller
     public function controle()
     {
         if(Auth::check() === true){
-            $usuarios = User::all();
+            $usuarios = User::orderBy('id')->get();
             return view('controle')->with('usuarios',$usuarios);
         }
         return redirect()->back();

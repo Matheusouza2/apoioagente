@@ -21,5 +21,6 @@ mix.styles([
     'resources/js/misc.js',
     'resources/js/dashboard.js',
     'resources/js/todolist.js',    
+    'resources/js/file-upload.js', 
 ], 'public/js/script.js')
 .version();

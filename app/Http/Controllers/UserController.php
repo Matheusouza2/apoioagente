@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-    public function put(Request $request)
+    public function store(Request $request)
     {
         $user = new User();
 
@@ -45,4 +45,44 @@ class UserController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
+    public function show()
+    {
+        return view('perfil')->with('');
+    }
+
+    public function put(Request $request, User $user)
+    {
+        $data = explode('/', $request['nascimento']);
+        $user->nascimento = $data[2].'-'.$data[1].'-'.$data[0];
+        $user->nome = $request['nome'];
+        $user->email = $request['email'];
+
+        if($request->password != null){
+            $user->password = Hash::make($request['password']);
+        }
+        
+        $user->save();
+
+        return redirect()->back();
+    }
+
+    public function storeImage(Request $request)
+    {
+        $imageName = time().'.'.$request->file('img')->extension();
+
+        $request->img->storeAs('public/images/'.Auth::user()->id, $imageName);
+
+        DB::update('update usuario set foto = ? where id = ?', [$imageName, Auth::user()->id]);
+
+        return back()->with('foto',$imageName);
+    }
+
+    public function perfilPub(Request $request)
+    {
+        $usuario = User::find($request->id);
+
+        return view('perfilPublic')->with('usuario', $usuario);
+    }
 }
+ 

@@ -17,7 +17,11 @@
             <li class="nav-item nav-profile">
                 <a href="#" class="nav-link">
                 <div class="nav-profile-image">
-                    <img src="{{ asset('images/avatar.png') }}" alt="profile">
+                    @if (Auth::user()->foto != null)
+                        <img src="{{ asset('storage/images/'.Auth::user()->id.'/'.Auth::user()->foto) }}" width="40%" class="rounded-circle" alt="">
+                    @else
+                        <img src="{{ asset('images/avatar.png') }}" width="50%" class="rounded-circle" alt="">
+                    @endif
                     <span class="login-status online"></span>
                     <!--change to offline or busy as needed-->
                 </div>

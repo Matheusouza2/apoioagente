@@ -16,6 +16,9 @@
               <i class="fal fa-home"></i>
             </span> Início
           </h3>
+          <div class="col-lg-6 text-right">
+            <a href="/agente/comunidade" class="btn btn-sm btn-gradient-info">Acesse a Comunidade</a>
+          </div>
         </div>
         @include('templates.body-loggedin')
       @include('templates.footer')
