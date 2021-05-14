@@ -25,7 +25,8 @@
                     </div>
                     <div class="card-body text-center">
                         @if (Auth::user()->foto != null)
-                            <img src="{{ asset('storage/images/'.Auth::user()->id.'/'.Auth::user()->foto) }}" width="40%" class="rounded-circle" alt="">
+                            <img src="{{ asset('images/avatar.png') }}" width="50%" class="rounded-circle" alt="">
+                            <!--<img src="{{ asset('storage/images/'.Auth::user()->id.'/'.Auth::user()->foto) }}" width="40%" class="rounded-circle" alt="">-->
                         @else
                             <img src="{{ asset('images/avatar.png') }}" width="50%" class="rounded-circle" alt="">
                         @endif
@@ -37,10 +38,11 @@
                                 <div class="input-group col-xs-12">
                                   <input type="text" class="form-control file-upload-info" disabled="" placeholder="Imagem">
                                   <span class="input-group-append">
-                                    <button class="file-upload-browse btn btn-gradient-primary" type="button">Escolher foto</button>
+                                    <button class="file-upload-browse btn btn-gradient-primary" type="button" disabled>Escolher foto</button>
                                   </span>
                                 </div>
                             </div>
+                            <small>O envio da foto do perfil está desabilitado por um tempo, quando retornar a gente te avisa !!</small>
                             <button class="btn btn-gradient-success">Enviar</button>
                         </form>
                     </div>

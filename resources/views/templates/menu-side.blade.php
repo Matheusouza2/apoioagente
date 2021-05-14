@@ -18,7 +18,8 @@
                 <a href="#" class="nav-link">
                 <div class="nav-profile-image">
                     @if (Auth::user()->foto != null)
-                        <img src="{{ asset('storage/images/'.Auth::user()->id.'/'.Auth::user()->foto) }}" width="40%" class="rounded-circle" alt="">
+                        <img src="{{ asset('images/avatar.png') }}" width="50%" class="rounded-circle" alt="">
+                        <!--<img src="{{ asset('storage/images/'.Auth::user()->id.'/'.Auth::user()->foto) }}" width="40%" class="rounded-circle" alt="">-->
                     @else
                         <img src="{{ asset('images/avatar.png') }}" width="50%" class="rounded-circle" alt="">
                     @endif
@@ -47,10 +48,20 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Usuario/LoginUsuario/">
-                    <span class="menu-title">Celcoin</span>
-                    <i class="fal fa-comment-dollar menu-icon"></i>
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Celcoin</span>
+                <i class="menu-arrow"></i>
+                <i class="fal fa-comment-dollar menu-icon"></i>
                 </a>
+                <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Usuario/LoginUsuario/">Entrar</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Conta/Validacao">Pagar Conta</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Recarga/Validacao">Recarga de Celular</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Transacoes/MeusComprovantes">Comprovantes</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Deposito/Validacao">Realizar Deposito</a></li>
+                </ul>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" target="_blank" href="https://app2.celcoin.com.br/">
@@ -87,22 +98,22 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/agente/comunidade">
+                <a class="nav-link" href="{{ route('comunidade') }}">
                 <span class="menu-title">Comunidade de Agentes</span>
                 <i class="fal fa-comments-dollar menu-icon"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/agente/suporte">
-                <span class="menu-title">Suporte <sup>Em breve</sup></span>
-                <i class="fal fa-user-headset menu-icon"></i>
+                <a class="nav-link" href="{{ route('suporteView') }}">
+                    <span class="menu-title">Suporte <sup>Em breve</sup></span>
+                    <i class="fal fa-user-headset menu-icon"></i>
                 </a>
             </li>
             @if (Auth::user()->permissao == 'M')
                 <li class="nav-item">
-                    <a class="nav-link" href="/agente/controle">
-                    <span class="menu-title">Controle de Usuários</span>
-                    <i class="fal fa-users menu-icon"></i>
+                    <a class="nav-link" href="{{ route('controleUsuarios') }}">
+                        <span class="menu-title">Controle de Usuários</span>
+                        <i class="fal fa-users menu-icon"></i>
                     </a>
                 </li>    
             @endif

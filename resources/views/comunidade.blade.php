@@ -102,15 +102,16 @@
                 </div>
                 <div id="div-cards"></div>
                 @foreach($publicacoes as $publicacao)
-                <div class="card">
+                <div class="card grid-margin">
                   <div class="card-header">
                     <div class="row">
                       <div class="col col-lg-6">
                         <a href="{{ route('perfilPublico', [$publicacao->id_user]) }}">
-                          <img src="{{ asset('storage/images/'.$publicacao->id_user.'/'.$publicacao->foto) }}" width="40px" class="rounded-circle" alt="">
+                          <img src="{{ asset('images/avatar.png') }}" width="40px" class="rounded-circle" alt="">
                           <span class="availability-status online"></span>
                           {{ $publicacao->nome }}
                         </a>
+                        <sup><i class="fal fa-certificate text-success"></i></sup> |
                         <sup>{{ date( 'd/m/Y' , strtotime($publicacao->data)) }}</sup>
                       </div>
                       <div class="col col-lg-6 text-right">

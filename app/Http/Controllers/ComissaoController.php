@@ -22,6 +22,12 @@ class ComissaoController extends Controller
         return response()->json($comissaoId);
     }
 
+    public function create()
+    {
+        $valorMes = DB::select('select sum(valor) as ganho from comissao where usuario = ?', [Auth::user()->id]);
+        return view('comissao')->with('ValorGanho', $valorMes[0]->ganho);
+    }
+
     public function show()
     {
         $dateNow = Carbon::createFromFormat('Y-m-d', Carbon::now()->toDateString());

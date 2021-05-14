@@ -36,11 +36,9 @@
                                 <h5>Idade: {{  $resultado->format( '%Y anos' ) }}</h5>
                                 <hr>
                                 <h6>Distintivos:</h6>
-                                <i class="fad fa-badge-dollar text-primary icon-md" title="Banqueiro"></i>
-                                <i class="fal fa-certificate text-succes icon-md" title="Primeiro Acesso"></i>
-                                <i class="fal fa-badge-check text-success icon-md" title="Conta Validada"></i>
-                                <i class="fal fa-hand-holding-magic text-danger icon-md" title="Moderador da Comunidade"></i>
-                                <i class="fal fa-comment-smile text-info icon-md" title="Realizou sua primeira postagem"></i>
+                                @foreach ($badges as $badge)
+                                  <i class="{{ $badge->badge }} icon-md" title="Aguarde..."></i>
+                                @endforeach
                             </div>
                         </div>
                     </div>

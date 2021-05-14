@@ -17,7 +17,8 @@
             </span> Início
           </h3>
           <div class="col-lg-6 text-right">
-            <a href="/agente/comunidade" class="btn btn-sm btn-gradient-info">Acesse a Comunidade</a>
+            <!--<a href="{{ route('distintivosIndex')}}" class="btn btn-sm btn-gradient-warning text-dark"><i class="fal fa-badge-dollar"></i> Os distintivos chegaram</a>-->
+            <a href="/agente/comunidade" class="btn btn-sm btn-gradient-info"><i class="fal fa-comments-dollar"></i> Acesse a Comunidade</a>
           </div>
         </div>
         @include('templates.body-loggedin')

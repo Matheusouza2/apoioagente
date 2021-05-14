@@ -130,6 +130,7 @@
                 <li><i class="fal fa-user-graduate text-secondary icon-md"></i> Mestre das respostas</li>
               </ul>
             </div>
+            <small>Clique <a href="{{route('distintivosIndex')}}"><strong>aqui</strong></a> e veja agora como ganhar seus distintivos</small>
           </div>
         </div>
       </div>

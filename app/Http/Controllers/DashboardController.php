@@ -20,7 +20,7 @@ class DashboardController extends Controller
     {
         if(Auth::check() === true){
             $usuarios = User::orderBy('id')->get();
-            return view('controle')->with('usuarios',$usuarios);
+            return view('admin.controle')->with('usuarios',$usuarios);
         }
         return redirect()->back();
     }
@@ -38,8 +38,9 @@ class DashboardController extends Controller
     {
         $dados = DB::select('select * from comissao where usuario = ?', [$user->id]);
         $dados2 = DB::select('select * from publicacao where usuario = ?', [$user->id]);
+        $coments = DB::select('select * from comentarios where usuario = ?', [$user->id]);
 
-        return view('detalhes')->with('dados', $dados)->with('dadosPub', $dados2)->with('user', $user);
+        return view('admin.detalhes')->with(['dados' => $dados, 'dadosPub' => $dados2, 'user' => $user, 'coments' => $coments]);
     }
 
     public function support()

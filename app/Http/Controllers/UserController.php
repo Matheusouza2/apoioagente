@@ -34,8 +34,10 @@ class UserController extends Controller
         ];
         
         if(Auth::attempt($usuario)){
-            $valorMes = DB::select('select sum(valor) as ganho from comissao where usuario = ?', [Auth::user()->id]);
-            return redirect()->route('comissao')->with('ValorGanho', $valorMes[0]->ganho);
+            if(empty(DB::select('select id from badges where badge = ? AND usuario = ?', ['fal fa-certificate text-succes', Auth::user()->id]))){
+                DB::insert('insert into badges (badge, usuario) values (?, ?)', ['fal fa-certificate text-succes', Auth::user()->id]);
+            }
+            return redirect()->route('comissao');
         }
         return redirect()->back()->with('error', 'Verifique o email e senha digitados e tente novamente');
     }
@@ -81,8 +83,8 @@ class UserController extends Controller
     public function perfilPub(Request $request)
     {
         $usuario = User::find($request->id);
-
-        return view('perfilPublic')->with('usuario', $usuario);
+        $badges = DB::select('select * from badges where usuario = ?', [$usuario->id]);
+        return view('perfilPublic')->with(['usuario' => $usuario, 'badges' => $badges]);
     }
 }
  

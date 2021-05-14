@@ -19,7 +19,7 @@ class PublicacaoController extends Controller
     public function index()
     {
         if(Auth::check() === true){
-            $publicacoes = Publicacao::select('publicacao.*', 'usuario.nome as nome', 'usuario.id as id_user', 'usuario.foto')
+            $publicacoes = Publicacao::select('publicacao.*', 'usuario.nome as nome', 'usuario.id as id_user', 'usuario.foto as foto')
                                     ->join('usuario', 'publicacao.usuario', '=', 'usuario.id')
                                     ->orderBy('publicacao.id', 'desc')
                                     ->get();

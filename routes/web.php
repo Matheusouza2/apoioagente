@@ -27,7 +27,7 @@ Route::post('/salvar', 'UserController@store')->name('cadastro');
  */
 Route::middleware(['auth'])->prefix('agente')->group(function () {
     
-    Route::get('/comissao', function (){ return view('comissao'); })->name('comissao');
+    Route::get('/comissao', 'ComissaoController@create')->name('comissao');
     /**
     * COMISSÃO
     */
@@ -83,6 +83,24 @@ Route::middleware(['auth'])->prefix('agente')->group(function () {
     Route::get('/suporte', 'DashboardController@support')->name('suporteView');
 
     /**
+     * PERFIL
+     */
+    Route::get('/perfil', 'UserController@show')->name('profile');
+    Route::put('/usuario/atualizar/{user}', 'UserController@put')->name('userUpdate');
+    Route::post('/usuario/enviar_foto/', 'UserController@storeImage')->name('uploadImagePerfil');
+    Route::get('/usuario/perfil/{id}', 'UserController@perfilPub')->name('perfilPublico');
+
+    /**
+     * BADGES
+     */
+    Route::get('/distintivos', 'BadgesController@index')->name('distintivosIndex');
+});
+
+/**
+ * ADMIN
+ */
+Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+    /**
     * CONTROLE MASTER
     */
     Route::get('/controle', 'DashboardController@controle')->name('controleUsuarios');
@@ -90,10 +108,10 @@ Route::middleware(['auth'])->prefix('agente')->group(function () {
     Route::get('/controle/detalhe/{user}', 'DashboardController@detalhe')->name('detalhes');
 
     /**
-     * PERFIL
+     * GERENCIA DE BADGES
      */
-    Route::get('/perfil', 'UserController@show')->name('profile');
-    Route::put('/usuario/atualizar/{user}', 'UserController@put')->name('userUpdate');
-    Route::post('/usuario/enviar_foto/', 'UserController@storeImage')->name('uploadImagePerfil');
-    Route::get('/usuario/perfil/{id}', 'UserController@perfilPub')->name('perfilPublico');
+    Route::get('/distintivos/administrar', 'BadgesController@create')->name('distintivosAdm');
+    Route::post('/distintivos/administrar/store', 'BadgesController@store')->name('distintivosStore');
+    Route::get('/distintivos/administrar/delete/{id}', 'BadgesController@delete')->name('badgeDelete');
+
 });
