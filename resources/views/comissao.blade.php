@@ -33,5 +33,30 @@
 
 @section('script')
   <script defer src="{{ asset('js/comissao.js') }}"></script>
+@if($alert ?? '' != null)
+<script>
+  const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+})
+
+swalWithBootstrapButtons.fire({
+  title: 'Qual sua comissão ?',
+  text: "Se você já ganha 0,55 centavos de comissão por boleto pago pode fechar a mensagem, se não, vem comigo pra saber como aumentar seus lucros",
+  icon: 'info',
+  showCancelButton: true,
+  confirmButtonText: 'Quero ganhar mais !',
+  cancelButtonText: 'Já ganho isso',
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+    window.location = "/dashboard";
+  }
+})
+</script>
+@endif
 
 @endsection

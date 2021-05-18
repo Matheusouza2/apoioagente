@@ -94,6 +94,11 @@ Route::middleware(['auth'])->prefix('agente')->group(function () {
      * BADGES
      */
     Route::get('/distintivos', 'BadgesController@index')->name('distintivosIndex');
+
+    /**
+     * ACEITE DE NOTIFICAÇÕES
+     */
+    Route::get('/notificacao/aceite/user/{user}/alert/{notificacao}')->name('aceiteNotificacao');
 });
 
 /**
@@ -107,6 +112,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::post('/controle/edit', 'DashboardController@edit')->name('editUser');
     Route::get('/controle/detalhe/{user}', 'DashboardController@detalhe')->name('detalhes');
     Route::get('/notificacoes', 'DashboardController@notificacao')->name('controleNotificacao');
+    Route::post('/notificacoes/store', 'DashboardController@storeNotificacao')->name('storeNotificacao');
+    Route::get('/notificacoes/del/{id}', 'DashboardController@delNotificacao')->name('delNotificacao');
 
     /**
      * GERENCIA DE BADGES

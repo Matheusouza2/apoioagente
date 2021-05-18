@@ -125,36 +125,29 @@
                     <div class="row">
                         <h4 class="card-title float-left">Novidades</h4>
                     </div>
-                   <div class="row">
+                </div>
+                <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <p>Você sabia que a Celcoin tá dando bonificação a cada quantidade pré definida de transações que você executa, dá uma olhada e corre que só está ativa até o dia 04/06/2021</p>
-                                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2500">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="{{ asset('images/news/1.jpg') }}" width="400px" alt="First slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="{{ asset('images/news/2.jpg') }}" width="400px" alt="First slide">
-                                        </div>
-                                    </div>
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2500">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="{{ asset('images/news/1.jpg') }}" width="400px" alt="First slide">
                                 </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <p>Nova Pagina do Celcoin lançada e em funcionamento</p>
-                                <img src="{{ asset('images/news/nova_page.png') }}" width="700px">
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="{{ asset('images/news/2.jpg') }}" width="400px" alt="First slide">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-8">
                         <div class="card">
                             <div class="card-body">
-                                
+                                <p>A Celcoin tirou a nova pagina do ar para algumas manutenções a mesma continua acessivel no link:  <a href="http://app2.celcoin.com.br/" target="_blank">Celcoin Nova Pagina</a></p>
+                                <img src="{{ asset('images/news/nova_page.png') }}" class="d-block w-100" width="1000px">
                             </div>
                         </div>
                     </div>
-                   </div>
                 </div>
             </div>
         </div>

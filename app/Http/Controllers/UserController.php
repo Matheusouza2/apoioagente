@@ -40,7 +40,8 @@ class UserController extends Controller
             if(empty(DB::select('select id from badges where badge = ? AND usuario = ?', ['fal fa-certificate text-succes', Auth::user()->id]))){
                 DB::insert('insert into badges (badge, usuario) values (?, ?)', ['fal fa-certificate text-succes', Auth::user()->id]);
             }
-            return redirect()->route('comissao');
+            $alert = DB::select('select * from notificacao_usuario nu INNER JOIN notificacao n ON nu.notificacao = n.id where nu.usuario = ? AND nu.aceite = 0', [Auth::user()->id]);
+            return redirect()->route('comissao')->with('alert', $alert);
         }
         return redirect()->back()->with('error', 'Verifique o email e senha digitados e tente novamente');
     }

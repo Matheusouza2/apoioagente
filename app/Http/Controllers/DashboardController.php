@@ -48,8 +48,33 @@ class DashboardController extends Controller
         return view('support');
     }
 
+    public function storeNotificacao(Request $request)
+    {
+        $id = DB::table('notificacao')->insertGetId([
+            'titulo' => $request->title,
+            'mensagem' =>  $request->mensagem, 
+            'tipo' => $request->tipo, 
+            'formato' => $request->formato, 
+            'pergunta' => $request->pergunta
+        ]);
+        $users = User::all();
+        foreach ($users as $user){
+            DB::insert('insert into notificacao_usuario (notificacao, usuario, aceite) values (?, ?, ?)', [$id, $user->id, 0]);
+        }
+
+        return redirect()->back()->with('success', 'Alerta cadastrado com sucesso!!');
+    }
+
+    public function delNotificacao(Request $request)
+    {
+        dd($request);
+    }
+
     public function notificacao()
     {
-        return view('admin.notificacoes');
+        $alerts = DB::select('select nu.notificacao, n.titulo, n.mensagem, u.nome, nu.aceite from notificacao_usuario nu INNER JOIN notificacao n ON n.id = nu.notificacao INNER JOIN usuario u ON nu.usuario = u.id');
+        $notifications = DB::select('select * from notificacao');
+        
+        return view('admin.notificacoes')->with(['alerts' => $alerts, 'notify' => $notifications]);
     }
 }

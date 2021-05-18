@@ -26,7 +26,8 @@
                         <h4>Cadastro de Notificações</h4>
                     </div>
                     <div class="card-body">
-                        <form action="" method="post" enctype="application/x-www-form-urlencoded" class="needs-validation forms-sample" novalidate>
+                        <form action="{{ route('storeNotificacao') }}" method="post" enctype="application/x-www-form-urlencoded" class="needs-validation forms-sample" novalidate>
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="form-group">
@@ -86,7 +87,24 @@
                         <h4>Notificações Postadas</h4>
                     </div>
                     <div class="card-body ">
-                        
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <th class="col-auto">Titulo</th>
+                                    <th class="col-lg-2">Mensagem</th>
+                                    <th class="col-auto">Excluir</th>
+                                </thead>
+                                <tbody>
+                                    @foreach ($notify as $notif)
+                                        <tr>
+                                            <td>{{ $notif->titulo }}</td>
+                                            <td>{{ $notif->mensagem }}</td>
+                                            <td><a href="{{ route('delNotificacao', [$notif->id]) }}" class="btn-danger btn-sm">Excluir</a></td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,12 +113,14 @@
 
         <div class="row">
             <div class="col-12">
-                <div class="card">
+                <div class="card grid-margin">
                     <div class="card-header">
                         <h4>Notificações Acompanhamento</h4>
                     </div>
-
-                    <div class="card-body grid-margin">
+                    @foreach ($alerts as $alert)
+                        <p>{{ $alert->notificacao}} </p>
+                    @endforeach
+                    <div class="card-body">
                         <h4>Notificação X</h4>
                         <table class="table table-hover">
                             <thead>

@@ -56,6 +56,7 @@
                 <div class="collapse" id="celcoin">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Usuario/LoginUsuario/">Entrar</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app2.celcoin.com.br/#/servicos">Todos os Serviços</a></li>
                     <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/#/servicos/pagar_conta">Pagar Conta</a></li>
                     <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/#/servicos/recarga_celular">Recarga de Celular</a></li>
                     <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/#/relatorios/vendas">Comprovantes</a></li>
