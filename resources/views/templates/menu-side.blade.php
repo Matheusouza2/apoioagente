@@ -56,18 +56,15 @@
                 <div class="collapse" id="celcoin">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Usuario/LoginUsuario/">Entrar</a></li>
-                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Conta/Validacao">Pagar Conta</a></li>
-                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Recarga/Validacao">Recarga de Celular</a></li>
-                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Transacoes/MeusComprovantes">Comprovantes</a></li>
-                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Deposito/Validacao">Realizar Deposito</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/#/servicos/pagar_conta">Pagar Conta</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/#/servicos/recarga_celular">Recarga de Celular</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/#/relatorios/vendas">Comprovantes</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/#/financas/deposito">Realizar Deposito</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/#/financas/saque">Realizar Saque</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/#/financas/transferencia">Realizar Transferencia</a></li>
+                    
                 </ul>
                 </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" target="_blank" href="https://app2.celcoin.com.br/">
-                    <span class="menu-title">Celcoin <sup>Nova Pagina</sup></span>
-                    <i class="fal fa-comment-dollar menu-icon"></i>
-                </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
