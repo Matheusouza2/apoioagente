@@ -142,14 +142,15 @@
                     <div class="col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                Você sabia que o celcoin está lançando um novo site 
+                                <p>Nova Pagina do Celcoin lançada e em funcionamento</p>
+                                <img src="{{ asset('images/new/nova_page.png') }}" width="400px">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                Você sabia que o celcoin está lançando um novo site 
+                                
                             </div>
                         </div>
                     </div>
