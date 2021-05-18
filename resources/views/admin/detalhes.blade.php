@@ -62,9 +62,20 @@
                 <h4>Publicações</h4>
               </div>
               <div class="card-body">
-                @foreach ($dadosPub as $pubs)
-                    <p>{{$pubs}}</p>
-                @endforeach
+                <table class="table table-hover">
+                  <thead>
+                    <th>Publicação</th>
+                    <th>Data</th>
+                  </thead>
+                  <tbody>
+                    @foreach ($dadosPub as $pubs)
+                      <tr>
+                        <td>{{$pubs->publicacao}}</td>
+                        <td>{{ date( 'd/m/Y' , strtotime($pubs->data)) }}</td>
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -74,9 +85,20 @@
                 <h4>Publicações</h4>
               </div>
               <div class="card-body">
-                @foreach ($coments as $coment)
-                    <p>{{$coment}}</p>
-                @endforeach
+                <table class="table table-hover">
+                  <thead>
+                    <th>Comentario</th>
+                    <th>Data</th>
+                  </thead>
+                  <tbody>
+                    @foreach ($coments as $coment)
+                      <tr>
+                        <td>{{$coment->comentario}}</td>
+                        <td>{{ date( 'd/m/Y' , strtotime($coment->data)) }}</td>
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

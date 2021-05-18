@@ -76,6 +76,7 @@
                                       <th scope="col">Nome</th>
                                       <th scope="col">Email</th>
                                       <th scope="col">Permissão</th>
+                                      <th scope="col">Ultimo Acesso</th>
                                       <th scope="col"></th>
                                     </tr>
                                   </thead>
@@ -86,6 +87,7 @@
                                         <td>{{ $usuario->nome }}</td>
                                         <td>{{ $usuario->email }}</td>
                                         <td>{{ $usuario->permissao }}</td>
+                                        <td>{{ date( 'd/m/Y' , strtotime($usuario->ultimo_login)) }}</td>
                                         <td>
                                           <a href="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="Preferencias"><i class="fas fa-ellipsis-v"></i></a>
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">

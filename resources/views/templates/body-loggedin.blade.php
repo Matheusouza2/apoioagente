@@ -5,8 +5,8 @@
           <img src="{{ asset('images/circle.svg') }}" class="card-img-absolute" alt="circle-image" />
           <h4 class="font-weight-normal mb-3">Ganhos do mês <i class="fal fa-chart-line fa-2x float-right"></i>
           </h4>
-          <h2 class="mb-5">R$ {{ session()->has('ValorGanho')?session()->get('ValorGanho'):0,00 }}</h2>
-          <h6 class="card-text">Crescimento de 100%</h6>
+          <h2 class="mb-5">R$ {{ number_format($ValorGanho, 2, ',', '.') }}</h2>
+          <h6 class="card-text">Crescimento de 100% <sup>*Comparado com o mês anterior</sup></h6>
         </div>
       </div>
     </div>

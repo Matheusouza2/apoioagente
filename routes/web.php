@@ -106,6 +106,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/controle', 'DashboardController@controle')->name('controleUsuarios');
     Route::post('/controle/edit', 'DashboardController@edit')->name('editUser');
     Route::get('/controle/detalhe/{user}', 'DashboardController@detalhe')->name('detalhes');
+    Route::get('/notificacoes', 'DashboardController@notificacao')->name('controleNotificacao');
 
     /**
      * GERENCIA DE BADGES

@@ -36,7 +36,7 @@
                         }
                     @endphp
                     <span class="font-weight-bold mb-2">{{ $nome }}</span>
-                    <span class="text-secondary text-small">Project Manager</span>
+                    <span class="text-secondary text-small">Agente Celcoin</span>
                 </div>
                 <i class="fad fa-badge-dollar text-muted nav-profile-badge"></i>
                 </a>
@@ -48,12 +48,12 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <a class="nav-link" data-toggle="collapse" href="#celcoin" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Celcoin</span>
                 <i class="menu-arrow"></i>
                 <i class="fal fa-comment-dollar menu-icon"></i>
                 </a>
-                <div class="collapse" id="ui-basic">
+                <div class="collapse" id="celcoin">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Usuario/LoginUsuario/">Entrar</a></li>
                     <li class="nav-item"> <a class="nav-link" target="_blank" href="https://app.celcoin.com.br/Conta/Validacao">Pagar Conta</a></li>
@@ -116,7 +116,20 @@
                         <i class="fal fa-users menu-icon"></i>
                     </a>
                 </li>    
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('controleNotificacao') }}">
+                        <span class="menu-title">Controle de Notificações</span>
+                        <i class="fal fa-bells menu-icon"></i>
+                    </a>
+                </li>    
             @endif
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('logout') }}">
+                    <span class="menu-title">Sair</span>
+                    <i class="fal fa-sign-out menu-icon"></i>
+                </a>
+            </li>    
         @endif
     </ul>
   </nav>

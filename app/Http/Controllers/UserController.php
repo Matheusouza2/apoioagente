@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class UserController extends Controller
 {
@@ -34,6 +35,8 @@ class UserController extends Controller
         ];
         
         if(Auth::attempt($usuario)){
+            $now = Carbon::createFromFormat('Y-m-d', Carbon::now()->toDateString());
+            DB::update('update usuario set ultimo_login = ? where id = ?', [$now, Auth::user()->id]);
             if(empty(DB::select('select id from badges where badge = ? AND usuario = ?', ['fal fa-certificate text-succes', Auth::user()->id]))){
                 DB::insert('insert into badges (badge, usuario) values (?, ?)', ['fal fa-certificate text-succes', Auth::user()->id]);
             }

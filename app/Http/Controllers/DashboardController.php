@@ -47,4 +47,9 @@ class DashboardController extends Controller
     {
         return view('support');
     }
+
+    public function notificacao()
+    {
+        return view('admin.notificacoes');
+    }
 }
