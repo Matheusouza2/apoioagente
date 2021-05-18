@@ -143,7 +143,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <p>Nova Pagina do Celcoin lançada e em funcionamento</p>
-                                <img src="{{ asset('images/new/nova_page.png') }}" width="400px">
+                                <img src="{{ asset('images/news/nova_page.png') }}" width="700px">
                             </div>
                         </div>
                     </div>
