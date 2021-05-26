@@ -29,6 +29,6 @@ class CreateBadgesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('badges');
+        
     }
 }

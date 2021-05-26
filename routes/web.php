@@ -96,6 +96,19 @@ Route::middleware(['auth'])->prefix('agente')->group(function () {
     Route::get('/distintivos', 'BadgesController@index')->name('distintivosIndex');
 
     /**
+     * MEI
+     */
+    Route::get('/MEI', function()
+    {
+        return view('queromei');
+    })->name('queromei');
+
+    Route::get('/souMEI', function()
+    {
+        return view('soumei');
+    })->name('soumei');
+
+    /**
      * ACEITE DE NOTIFICAÇÕES
      */
     Route::get('/notificacao/aceite/user/{user}/alert/{notificacao}')->name('aceiteNotificacao');

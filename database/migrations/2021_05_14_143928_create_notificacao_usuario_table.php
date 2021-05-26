@@ -31,6 +31,6 @@ class CreateNotificacaoUsuarioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notificacao_usuario');
+        
     }
 }

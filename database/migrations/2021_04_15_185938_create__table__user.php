@@ -30,6 +30,6 @@ class CreateTableUser extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_table__user');
+        
     }
 }

@@ -107,6 +107,14 @@
                     <i class="fal fa-user-headset menu-icon"></i>
                 </a>
             </li>
+            @if (Auth::user()->cnpj != null)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('soumei') }}">
+                        <span class="menu-title">Sou MEI</span>
+                        <i class="fal fa-store-alt menu-icon"></i>
+                    </a>
+                </li>
+            @endif
             @if (Auth::user()->permissao == 'M')
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('controleUsuarios') }}">

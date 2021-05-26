@@ -103,34 +103,21 @@
     <div class="col-sm-12 col-md-12 col-lg-4 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Sistema de Níveis</h4>
+          <h4 class="card-title">Quer ganhar mais?</h4>
           <div class="row mt-4">
-            <small> O sistema de níveis funciona da seguinte forma, ao realizar interações você ganha distintivos, esses distintivos serão apresentados no seu perfil
-              para todos verem. Ao atingir o nivel máximo você ganha acesso premium a plataforma.</small>
-            <div class="col-sm-12 col-lg-6 mt-4">
-              <h6>Distintivos padrões</h6>
-              <ul class="list-arrow mt-2">
-                <li><i class="fad fa-badge-dollar text-muted icon-md"></i> Auxiliar</li>
-                <li><i class="fad fa-badge-dollar text-dark icon-md"></i> Atendente</li>
-                <li><i class="fad fa-badge-dollar text-info icon-md"></i> Caixa</li>
-                <li><i class="fad fa-badge-dollar text-danger icon-md"></i> Gerente de Caixa</li>
-                <li><i class="fad fa-badge-dollar text-success icon-md"></i> Gerente Geral</li>
-                <li><i class="fad fa-badge-dollar text-warning icon-md"></i> Gerente Regional</li>
-                <li><i class="fad fa-badge-dollar text-primary icon-md"></i> Banqueiro</li>
-              </ul>
+            <div class="col-sm-12 col-lg-12 mt-4">
+              Você sabia que é possivel ganhar até <strong>0,55 centavos</strong> por transação no Celcoin? 
+              <br>
+              <br>
+              Isso mesmo, se você tem um CNPJ e fazer o credenciamento com a Celcoin você pode receber 0,55 centavos por transação de Ficha de Compensasão(BOLETOS) e 0,35 centavos
+              por Conta Convenio(Agua, Luz, Detran).
+              <br>
+              <br>
+              Basta você ter um CNPJ, e não é tão dificil assim de conseguir um, se você quer saber como se tornar MEI e faturar mais com o Celcoin <a href="{{ route('queromei') }}"> Clica aqui </a>que eu 
+              vou te ensinar a abrir um MEI e como gerenciar o mesmo, clientes com CNPJ terão acesso direto a um chat comigo para tirarem todas as duvidas, e eu vou deixar
+              bem claro sobre como tudo funciona, sem enrolação. 
+
             </div>
-            <div class="col-sm-12 col-lg-6 mt-4">
-              <h6>Distintivos adicionais</h6>
-              <ul class="list-arrow mt-2">
-                <li><i class="fal fa-certificate text-succes icon-md"></i> Primeiro acesso</li>
-                <li><i class="fal fa-badge-check text-success icon-md"></i> Conta Validada</li>
-                <li><i class="fal fa-hand-holding-magic text-danger icon-md"></i> Moderador</li>
-                <li><i class="fal fa-comments text-secondary icon-md"></i> Primeiro Comentario</li>
-                <li><i class="fal fa-comment-smile text-info icon-md"></i> Primeira Postagem</li>
-                <li><i class="fal fa-user-graduate text-secondary icon-md"></i> Mestre das respostas</li>
-              </ul>
-            </div>
-            <small>Clique <a href="{{route('distintivosIndex')}}"><strong>aqui</strong></a> e veja agora como ganhar seus distintivos</small>
           </div>
         </div>
       </div>

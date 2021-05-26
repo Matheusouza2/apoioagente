@@ -30,6 +30,6 @@ class CreatePublicacaosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('publicacaos');
+        
     }
 }

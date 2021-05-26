@@ -59,17 +59,23 @@ class UserController extends Controller
 
     public function put(Request $request, User $user)
     {
-        $data = explode('/', $request['nascimento']);
-        $user->nascimento = $data[2].'-'.$data[1].'-'.$data[0];
-        $user->nome = $request['nome'];
-        $user->email = $request['email'];
 
-        if($request->password != null){
-            $user->password = Hash::make($request['password']);
+        if($request->cnpj != null){
+            User::where('id', $user->id)
+            ->update(['cnpj' => $request->cnpj]);
+            return redirect()->route('comissao')->with('success', 'CNPJ cadastrado com sucesso!');    
+        }else{
+            $data = explode('/', $request['nascimento']);
+            $user->nascimento = $data[2].'-'.$data[1].'-'.$data[0];
+            $user->nome = $request['nome'];
+            $user->email = $request['email'];
+    
+            if($request->password != null){
+                $user->password = Hash::make($request['password']);
+            }
+            
+            $user->save();
         }
-        
-        $user->save();
-
         return redirect()->back();
     }
 

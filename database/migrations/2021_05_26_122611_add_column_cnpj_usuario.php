@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNotificacaoTable extends Migration
+class AddColumnCnpjUsuario extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreateNotificacaoTable extends Migration
      */
     public function up()
     {
-        Schema::create('notificacao', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('titulo');
-            $table->string('mensagem');
-            $table->string('tipo');
-            $table->timestamps();
+        Schema::table('usuario', function (Blueprint $table) {
+            $table->string('cnpj')->nullable();
         });
     }
 
@@ -29,6 +25,8 @@ class CreateNotificacaoTable extends Migration
      */
     public function down()
     {
-        
+        Schema::table('usuario', function (Blueprint $table) {
+            $table->dropColumn('cnpj');
+        });
     }
 }
