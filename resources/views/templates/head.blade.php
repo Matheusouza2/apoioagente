@@ -19,7 +19,7 @@
   <!-- partial -->
   <!-- container-scroller -->
     <!-- plugins:js -->
-    <script defer src="{{ asset('js/script.js')}}"></script>
+    <script src="{{ asset('js/script.js')}}"></script>
     <!-- endinject -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 

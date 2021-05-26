@@ -8,10 +8,9 @@
                 <p>Seja bem-vindo ao primeiro sistema de apoio a comunidade de agentes do Celcoin.</p>
                 <p>Se você veio pelo vídeo do <a href="https://www.youtube.com/channel/UCwM0Bh4sf0rxdnHsFk67DmA" target="_blank"> Marcello Rizzon</a>, não se preocupe a plataforma precisou passar por melhorias visuais mais continua a mesma.</p>
                 <hr>
-                <p>Algumas mudanças precisaram ser realizadas para a adaptação do sistema nos celulares que não estava funcionando muito bem, o visual também não estava me agradando então a mudança só trouxe melhorias.</p>
-                <p>Devido ao baixo nível de engajamento na comunidade nós tivemos que restringir a página para pessoas cadastradas. <br> Não, ela não será paga nem hoje, nem amanhã, nem nunca.
-                Você pode continuar desfrutando da plataforma de forma gratuita para gerir suas comissões e tudo mais. <br> Porém terá que realizar um rápido cadastro e realizar o seu login para 
-                desfrutar de todas as ferramentas agora.</p>
+                <p>Se você tá acessando pelo celular e tá recebendo a mensagem de que a pagina não é segura, tenta acesso pelo link <a href="https://apoioagente.herokuapp.com">https://apoioagente.herokuapp.com</a></p>
+                <p>Em alguns celulares e computadores estava aparecendo como site não seguro, mais isso era um erro no estilo da pagina, agora está tudo resolvido. <br>
+                A plataforma continua grátis como sempre, e eu estou preparando o material para ganhar seus <strong>0,55 centavos</strong> por boleto pago no Celcoin, então espera só mais um pouco.
                 <hr>
                 <br>
                 <h5>Vamos falar de coisas boas <strong>(NOVIDADES)</strong></h5>
@@ -128,7 +127,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                        <p>Você sabia que a Celcoin tá dando bonificação a cada quantidade pré definida de transações que você executa, dá uma olhada e corre que só está ativa até o dia 04/06/2021</p>
+                        <p>Corre que tá acabando, a promoção dura só até o dia 04/04/2021</p>
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2500">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">

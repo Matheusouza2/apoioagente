@@ -122,4 +122,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::post('/distintivos/administrar/store', 'BadgesController@store')->name('distintivosStore');
     Route::get('/distintivos/administrar/delete/{id}', 'BadgesController@delete')->name('badgeDelete');
 
+    Route::get('/extrato', function()
+    {
+        return view('admin.extrato');
+    });
 });
