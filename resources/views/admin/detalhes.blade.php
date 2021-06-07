@@ -24,8 +24,8 @@
                 <h4>Dados do usuário</h4>
               </div>
               <div class="card-body">
-                <h6>{{ $user->nome }}</h6>
-                <h6>{{ $user->email }}</h6>
+                <h6>Nome: {{ $user->nome }}</h6>
+                <h6>Email: {{ $user->email }}</h6>
               </div>
             </div>
           </div>

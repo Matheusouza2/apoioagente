@@ -74,6 +74,7 @@
                                     <tr>
                                       <th scope="col">ID</th>
                                       <th scope="col">Nome</th>
+                                      <th scope="col">CNPJ</th>
                                       <th scope="col">Email</th>
                                       <th scope="col">Permissão</th>
                                       <th scope="col">Ultimo Acesso</th>
@@ -85,6 +86,7 @@
                                       <tr>
                                         <td>{{ $usuario->id }}</td>
                                         <td>{{ $usuario->nome }}</td>
+                                        <td>{{ $usuario->cnpj }}</td>
                                         <td>{{ $usuario->email }}</td>
                                         <td>{{ $usuario->permissao }}</td>
                                         <td>{{ date( 'd/m/Y' , strtotime($usuario->ultimo_login)) }}</td>
