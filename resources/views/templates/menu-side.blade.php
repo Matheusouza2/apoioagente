@@ -84,12 +84,6 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/agente/netflix">
-                <span class="menu-title">Revenda Netflix <sup>Em breve</sup></span>
-                <i class="fal fa-tv menu-icon"></i>
-                </a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="/agente/desktop">
                 <span class="menu-title">Sistema Desktop <sup>Em breve</sup></span>
                 <i class="fal fa-laptop menu-icon"></i>

@@ -15,8 +15,8 @@ class CreateNotificacaoUsuarioTable extends Migration
     {
         Schema::create('notificacao_usuario', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('notificacao');
-            $table->bigInteger('usuario');
+            $table->bigInteger('notificacao')->unsigned();
+            $table->bigInteger('usuario')->unsigned();
             $table->integer('aceite');
             $table->foreign('usuario')->references('id')->on('usuario');
             $table->foreign('notificacao')->references('id')->on('notificacao');

@@ -18,8 +18,8 @@ class CrateComissaoTable extends Migration
             $table->date('data');
             $table->String('categoria');
             $table->double('valor');
-            $table->integer('usuario');
-            $table->foreign('usuario')->references('id')->on('usuario');
+            $table->bigInteger('usuario')->unsigned();
+            $table->foreign('usuario')->references('id')->on('usuario')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

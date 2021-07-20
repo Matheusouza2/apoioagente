@@ -15,12 +15,12 @@ class CreateComentariosTable extends Migration
     {
         Schema::create('comentarios', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->Integer('publicacao');
-            $table->Integer('usuario');
+            $table->bigInteger('publicacao')->unsigned();
+            $table->bigInteger('usuario')->unsigned();
             $table->date('data');
             $table->text('comentario');
-            $table->foreign('publicacao')->references('id')->on('publicacao');
-            $table->foreign('usuario')->references('id')->on('usuario');
+            $table->foreign('publicacao')->references('id')->on('publicacao')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('usuario')->references('id')->on('usuario')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

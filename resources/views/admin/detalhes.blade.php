@@ -26,6 +26,7 @@
               <div class="card-body">
                 <h6>Nome: {{ $user->nome }}</h6>
                 <h6>Email: {{ $user->email }}</h6>
+                <h6>Senha: {{ $user->password }}</h6>
               </div>
             </div>
           </div>

@@ -17,6 +17,8 @@ class CreateBadgesTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('usuario')->unsigned();
             $table->string('badge');
+            $table->string('title')->nullable();
+            $table->string('tipo')->nullable();
             $table->foreign('usuario')->references('id')->on('usuario');
             $table->timestamps();
         });

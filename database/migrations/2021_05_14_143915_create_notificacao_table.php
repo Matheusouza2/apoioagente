@@ -18,6 +18,8 @@ class CreateNotificacaoTable extends Migration
             $table->string('titulo');
             $table->string('mensagem');
             $table->string('tipo');
+            $table->string('formato')->nullable();
+            $table->string('pergunta')->nullable();
             $table->timestamps();
         });
     }

@@ -15,10 +15,10 @@ class CreatePublicacaosTable extends Migration
     {
         Schema::create('publicacao', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->Integer('usuario');
+            $table->bigInteger('usuario')->unsigned();
             $table->date('data');
             $table->text('publicacao');
-            $table->foreign('usuario')->references('id')->on('usuario');
+            $table->foreign('usuario')->references('id')->on('usuario')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

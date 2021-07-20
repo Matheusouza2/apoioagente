@@ -19,6 +19,10 @@ class CreateTableUser extends Migration
             $table->String('email');
             $table->String('password');
             $table->String('permissao');
+            $table->date('nascimento')->nullable();
+            $table->string('foto')->nullable();
+            $table->date('ultimo_login')->nullable();
+            $table->string('cnpj')->nullable();
             $table->timestamps();
         });
     }

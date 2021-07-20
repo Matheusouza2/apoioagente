@@ -13,18 +13,17 @@ class UserController extends Controller
 {
     public function store(Request $request)
     {
-        $user = new User();
+        $user = new User(); 
 
-        $userVerify = User::where('email', $request['email'])->first();
+        $request->validate([
+            'email' => 'required|unique:usuario|email',
+            'password' => 'required|min:8',
+        ]);
         $request['permissao'] = 'A';
-        if($userVerify === null){
-            $request['password'] = Hash::make($request['password']);
-            $user->create($request->except(['_token']));
-            return redirect('/')->with('success', 'Usuário cadastrado com sucesso, seja bem vindo a nossa plataforma !');
-        }else{
-            return redirect('/')->with('error', 'Já consta um cadastro com o E-mail informado !');
-        }
-
+        
+        $request['password'] = Hash::make($request['password']);
+        $user->create($request->except(['_token']));
+        return redirect('/')->with('success', 'Usuário cadastrado com sucesso, seja bem vindo a nossa plataforma !');
     }
 
     public function login(Request $request)

@@ -21,7 +21,7 @@
     <!-- plugins:js -->
     <script src="{{ asset('js/script.js')}}"></script>
     <!-- endinject -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @yield('script')
     <!-- End custom js for this page -->
